@@ -1,0 +1,46 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/attempts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="Попытки"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_locked" />
+
+    <TextView android:id="@+id/textView" android:layout_width="347dp" android:layout_height="87dp" android:layout_marginTop="32dp" android:text="Авторизация" android:textAlignment="center" android:textSize="48sp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+    <LinearLayout android:layout_width="368dp" android:layout_height="65dp" android:layout_marginTop="200dp" android:orientation="horizontal" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <TextView android:id="@+id/textView2" android:layout_width="69dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Логин" android:textAlignment="inherit" android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Введите логин"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+    <LinearLayout android:id="@+id/linearLayout" android:layout_width="368dp" android:layout_height="65dp" android:layout_marginTop="248dp" android:orientation="horizontal" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.511" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <TextView android:id="@+id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:text="Пароль" android:textAlignment="inherit" android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/editTextTextPersonName1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Введите пароль"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+    <Button android:id="@+id/button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="154dp" android:backgroundTint="@color/black" android:onClick="Login" android:text="Войти" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/linearLayout"/>
+    <TextView android:id="@+id/login_locked" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="58dp" android:text="Заблокирован" android:visibility="invisible" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/linearLayout"/>
+    <TextView android:id="@+id/number_of_attempts" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_marginTop="8dp" android:layout_marginEnd="134dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/attempts" app:layout_constraintTop_toBottomOf="@+id/login_locked"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
